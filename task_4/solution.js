@@ -13,14 +13,14 @@ function parseProducts(json) {
 }
 
 function renderProductsCards(json) {
-    clearProducts;
-    products = parseProducts(json);
-    return products;
-    length = products.length;
-    for (let i = 0; i < length; i++) {
+    clearProducts();
+    let products = parseProducts(json);
+    let length = products.length;
+    for (let i = 0; i < length; i += 1) {
         addProduct(products[i]);
     }
 }
+
 // Напишите функцию renderProductsCards(json)
 // Аргументом функции является JSON
 // Выполните функцию clearProducts - она уже написана в коде, просто вызовите ее, аргументы не требуются
